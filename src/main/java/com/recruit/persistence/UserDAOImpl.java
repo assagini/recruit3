@@ -22,13 +22,13 @@ public class UserDAOImpl implements UserDAO {
 	private static String namespace = "com.recruit.mapper.UserMapper";
 
 	@Override
-	public UserVO read(String uid) throws Exception {
+	public BoardVO read(String id) throws Exception {
 		System.out.println("read");
-		return session.selectOne(namespace + ".read", uid);
+		return session.selectOne(namespace + ".read", id);
 	}
 
 	@Override
-	public List<UserVO> listAll() throws Exception {
+	public List<BoardVO> listAll() throws Exception {
 		return session.selectList(namespace + ".listAll");
 	}
 
